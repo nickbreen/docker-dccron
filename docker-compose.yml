@@ -1,0 +1,8 @@
+version: '2'
+services:
+  dcapi:
+    build: .
+    image: nickbreen/dccron
+    environment:
+      - DOCKERCLOUD_USER
+      - DOCKERCLOUD_APIKEY
