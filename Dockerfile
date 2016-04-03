@@ -6,8 +6,8 @@ RUN apt-get update && DEBIAN_FRONEND=noninteractive apt-get install -qqy python-
 
 RUN pip install python-dockercloud
 
-COPY run /etc/service/dockercloud-events/run
+COPY run /etc/service/dccron/run
 
-COPY events.py /opt/dcapi/
+COPY dccron.py /opt/dccron/
 
 ENV DOCKERCLOUD_USER="" DOCKERCLOUD_APIKEY=""

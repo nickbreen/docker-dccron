@@ -1,8 +1,12 @@
 version: '2'
 services:
-  dcapi:
+  dccron:
     build: .
     image: nickbreen/dccron
     environment:
-      - DOCKERCLOUD_USER
-      - DOCKERCLOUD_APIKEY
+      DOCKERCLOUD_USER: $DOCKERCLOUD_USER
+      DOCKERCLOUD_APIKEY: $DOCKERCLOUD_APIKEY
+      DPP: |
+        # Type Action State User Command
+        stack update Success root jq .
+        *     *      Success root echo Type=$$1 Action=$$2 Resource URI=$$3 State=$$4 UUID=$$5 Datetime=$$6 Parents=\($${@:7}\)

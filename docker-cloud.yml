@@ -1,4 +1,5 @@
-dcapi:
-  image: nickbreen/dccron
+dccron:
+  image: nickbreen/dccron:v0.1.0
+  autoredeploy: true
   roles:
     - global
