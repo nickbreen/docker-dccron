@@ -1,5 +1,5 @@
-#!/bin/sh
+#!/bin/bash
 
 . /etc/container_environment.sh
 
-exec python /opt/dccron/dccron.py
+cat /etc/container_environment/DCCRON_* | exec python /opt/dccron/dccron.py
