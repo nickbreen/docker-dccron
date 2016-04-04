@@ -8,5 +8,6 @@ services:
       DOCKERCLOUD_APIKEY: $DOCKERCLOUD_APIKEY
       DCCRON_0: |
         # Type Action State User Command
-        * * * root jq .
+        service * * root curl -sSfu '$DOCKERCLOUD_USER:$DOCKERCLOUD_APIKEY' https://cloud.docker.com$$3 | jq .name -r
         * * * root echo Type=$$1 Action=$$2 Resource URI=$$3 State=$$4 UUID=$$5 Datetime=$$6 Parents=\($${@:7}\)
+        * * * root jq .

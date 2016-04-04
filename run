@@ -2,4 +2,4 @@
 
 . /etc/container_environment.sh
 
-cat /etc/container_environment/DCCRON_* | exec python /opt/dccron/dccron.py
+cat /etc/container_environment/DCCRON_* | exec /opt/dccron/dccron.py

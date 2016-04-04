@@ -8,4 +8,6 @@ RUN pip install python-dockercloud
 
 ENV DOCKERCLOUD_USER="" DOCKERCLOUD_APIKEY=""
 
-COPY dccron.py /etc/service/dccron/run
+COPY run /etc/service/dccron/run
+
+COPY dccron.py /opt/dccron/
