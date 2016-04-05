@@ -1,4 +1,4 @@
-Docker-Cloud API "cron" service. Configure cron-like job specifications for Docker-Cloud API events. — Edit
+Docker-Cloud API "cron" service. Configure cron-like job specifications for Docker-Cloud API events.
 
 # Usage
 
